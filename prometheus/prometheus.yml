@@ -1,0 +1,22 @@
+global:
+  scrape_interval: "5s"
+
+scrape_configs:
+  - job_name: "prometheus"
+    static_configs:
+      - targets: ["localhost:9090"] # Prometheus itself
+
+  - job_name: "node-exporter"
+    static_configs:
+      - targets: ["node-exporter:9100"] # Node Exporter
+
+  - job_name: "cadvisor"
+    static_configs:
+      - targets: ["cadvisor:8080"] # cAdvisor
+
+  - job_name: "demo"
+    static_configs:
+      - targets:
+        - "demo.promlabs.com:10000"
+        - "demo.promlabs.com:10001"
+        - "demo.promlabs.com:10002"
