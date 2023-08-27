@@ -14,9 +14,9 @@ scrape_configs:
     static_configs:
       - targets: ["cadvisor:8080"] # cAdvisor
 
-  - job_name: "demo"
-    static_configs:
-      - targets:
-        - "demo.promlabs.com:10000"
-        - "demo.promlabs.com:10001"
-        - "demo.promlabs.com:10002"
+  # - job_name: "demo"
+  #   static_configs:
+  #     - targets:
+  #       - "demo.promlabs.com:10000"
+  #       - "demo.promlabs.com:10001"
+  #       - "demo.promlabs.com:10002"
